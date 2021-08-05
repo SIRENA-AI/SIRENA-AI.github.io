@@ -1,3 +1,10 @@
+/*
+Template Name: Evrika
+Author URI: https://themeforest.net/user/epic-themes
+Author Name: Epic Themes
+Version: 1.0
+*/
+
 /* --- TABLE OF CONTENT
 
 01. GENERAL LAYOUT
@@ -817,7 +824,7 @@ ul.footer_social li a i:hover {
 
 .frame-border {
     margin-top: 30px;
-    border: 10px solid rgba(255, 255, 255, 0.90);
+    border: 10px solid rgba(0, 0, 0, 0.90);
     webkit-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
@@ -825,7 +832,7 @@ ul.footer_social li a i:hover {
 
 /* Partners */
 .partners-section {
-    padding: 40px 0 20px 0;
+    padding: 20px 0 20px 0;
     background-color: #f1faff;
 }
 
