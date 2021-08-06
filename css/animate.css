@@ -14,6 +14,75 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
+@property --percent {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --temp {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --v1 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --v2 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --v3 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --v4 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+h6 {
+  font: 800 40px monospace;
+  transition: --percent 20s;
+  --temp: calc(var(--percent) * 1);
+  --v1: max(var(--temp) - 0.5, 0);
+  --v2: max((var(--temp) - var(--v1)) * 100 - 0.5, 00);
+  counter-reset: v1 var(--v1) v2 var(--v2);
+}
+h6::before {
+  content: counter(v1) "," counter(v2, decimal-leading-zero) counter(v2);
+}
+
+h7 {
+  font: 800 40px monospace;
+  padding: 2rem;
+  transition: --percent 2s;
+  --temp: calc(var(--percent) * 1);
+  --v3: max((var(--temp) - var(--v1)) * 1 - 0.5, 0);
+  counter-reset: v3 var(--v3);
+}
+h7::before {
+  content: counter(v3)"rd";
+}
+
+h8 {
+  font: 800 40px monospace;
+  padding: 2rem;
+  transition: --percent 20s;
+  --temp: calc(var(--percent) * 1);
+  --v4: max((var(--temp) - var(--v1)) * 1 - 0.5, 0);
+  counter-reset: v4 var(--v4);
+}
+h8::before {
+  content: counter(v4);
+}
+
+
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
