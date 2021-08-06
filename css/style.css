@@ -2427,7 +2427,7 @@ ul.benefits.white li i {
 @media (max-width: 991px) {
 
 	.navbar-fixed-top {
-	    background-color: #100918!important;
+	    background-color: #000!important;
 	}
 
 	.navbar-fixed-top.opaque {
