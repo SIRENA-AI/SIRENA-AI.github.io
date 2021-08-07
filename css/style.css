@@ -1,3 +1,10 @@
+/*
+Template Name: Evrika
+Author URI: https://themeforest.net/user/epic-themes
+Author Name: Epic Themes
+Version: 1.0
+*/
+
 /* --- TABLE OF CONTENT
 
 01. GENERAL LAYOUT
@@ -22,6 +29,91 @@
 
 --- */
 
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+		  z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+		background: rgb(2,0,36);
+		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+			background-size: 400% 400%;
+			-webkit-animation: Gradient 10s ease infinite;
+			-moz-animation: Gradient 10s ease infinite;
+			animation: Gradient 10s ease infinite;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+		  z-index: -1;
+			background: rgb(2,0,36);
+			background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+				background-size: 400% 400%;
+				-webkit-animation: Gradient 10s ease infinite;
+				-moz-animation: Gradient 10s ease infinite;
+				animation: Gradient 10s ease infinite;
+
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+		    opacity: 0.75;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
 /* ========================================================== */
 /* 			               01. GENERAL LAYOUT                 */
 /* ========================================================== */
@@ -576,22 +668,41 @@ iframe {
 
 
 .navbar-brand{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Helvetica', sans-serif;
 	font-size: 28px;
 	font-weight: 500;
-	color: #e52f37;
+	text-align: center;
+
+  background: linear-gradient(to right, #30b1ce 20%, #30b1ce 40%, 	#318db2 60%, 	#003b61 80%);
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 5s linear infinite;
+
+}
+
+
+@keyframes shine {
+	to {
+		background-position: 200% center;
+	}
 }
 
 .navbar-brand:hover{
-	color: #fff;
+	color: #e52f37;
 }
 
 .navbar-fixed-top.opaque .navbar-brand{
-	color: #e52f37;
+	color: #fff;
 }
 
 .navbar-fixed-top.opaque .navbar-brand:hover{
-	color: #e52f37;
+	color: #fff;
 }
 
 .navbar {
@@ -627,7 +738,7 @@ iframe {
 	top: 0;
 	margin-top: 0;
 	background-color: #000!important;
-	border-bottom: 1px solid #efefef;
+	border-bottom: 1px solid #000;
 	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.04)!important;
 	transition: all 0.25s ease-in-out 0s;
 }
@@ -808,13 +919,9 @@ ul.footer_social li a i:hover {
 	text-align: center;
   	padding-top: 197px;
 	  padding-bottom: 127px;
-	background: rgb(2,0,36);
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-	background-size: 400% 400%;
-	-webkit-animation: Gradient 10s ease infinite;
-	-moz-animation: Gradient 10s ease infinite;
-	animation: Gradient 10s ease infinite;
+
 }
+
 
 .home-section h1{
 	margin-bottom: 20px;
@@ -2431,8 +2538,8 @@ ul.benefits.white li i {
 	}
 
 	.navbar-fixed-top.opaque {
-	    padding-top: 10px;
-	    padding-bottom: 10px;
+	    padding-top: 5px;
+	    padding-bottom: 5px;
 	}
 
 	.navbar-fixed-top .navbar-nav > li {
@@ -2440,12 +2547,12 @@ ul.benefits.white li i {
 	}
 
 	.navbar-fixed-top .navbar-nav > li.discover-link {
-		margin-top: 10px;
+		margin-top: 5px;
 	}
 
 	.navbar-fixed-top .navbar-nav > li > a.discover-btn {
-	    padding: 8px 12px!important;
-	    margin-left: 20px;
+	    padding: 4px 10px!important;
+	    margin-left: 10px;
 	    font-size: 17px!important;
 	}
 
@@ -2522,7 +2629,7 @@ ul.benefits.white li i {
 	}
 
 	.partners-section {
-	    padding: 40px 0;
+	    padding: 1px 0;
 	}
 
 	.partners{
@@ -2533,7 +2640,7 @@ ul.benefits.white li i {
 		font-size: 18px;
 		line-height: 30px;
 		float: none!important;
-		margin-right: 30px;
+		margin-right: 2px;
 	}
 
 	.blog-item{
