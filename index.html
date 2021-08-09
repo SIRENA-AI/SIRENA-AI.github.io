@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
   <meta charset="utf-8">
@@ -29,6 +29,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500display=swap" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+
   <!-- Font Favicon -->
   <link rel="shortcut icon" href="images/sirena.ico">
 
@@ -46,8 +50,26 @@
       <div class="container">
 
         <!--begin logo -->
-        <a class="wow tada" data-wow-delay="3s"><img src="images/sirena.png" width="80" height="80"></a>
-        <a class="navbar-brand">SIRΞNA AI</a>
+        <a class="wow tada" data-wow-delay="3s"><img src="images/sirena.png" width="80" height="80" margin="0">        <svg viewbox="0 0 100 20" width="200" >
+                  <defs>
+                    <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="5%" stop-color="#30b1ce" />
+                      <stop offset="95%" stop-color="#123752" />
+                    </linearGradient>
+                    <pattern id="wave" x="0" y="0" width="120" height="20" patternUnits="userSpaceOnUse">
+                      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)">
+                        <animateTransform attributeName="transform" begin="0s" dur="1.5s" type="translate" from="0,0" to="40,0" repeatCount="indefinite" />
+                      </path>
+                    </pattern>
+                  </defs>
+                  <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)" fill-opacity="0.6">
+                    SIRΞNA AI</text>
+                  <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#gradient)" fill-opacity="0.5">
+                    SIRΞNA AI</text>
+                </svg></a>
+
+
+
         <!--end logo -->
 
         <!--begin navbar-toggler -->
@@ -98,10 +120,10 @@
   <!--end header -->
 
   <!--begin home section -->
-  <section class="home-section" id="home" >
+  <section class="home-section" id="home">
 
     <!--begin container -->
-    <div class="container" >
+    <div class="container">
       <!--begin row -->
       <div class="row align-items-center">
 
@@ -194,7 +216,9 @@
       <div class="row">
 
         <!--begin col-md-12 -->
+
         <div class="col-md-12 text-center margin-bottom-60">
+
 
           <h2 class="section-title">What We Do</h2>
 
@@ -305,9 +329,9 @@
 
               <h6 class="section-title"></h6>
 
-              <p class="section-subtitle" >people die from drowning each year</p>
+              <p class="section-subtitle">people die from drowning each year</p>
 
-            </div >
+            </div>
             <!--end col-md-12 -->
 
           </div>
@@ -319,7 +343,7 @@
 
               <h7 class="section-title"></h7>
 
-              <p class="section-subtitle" >cause of unintentional injury death worldwide</p>
+              <p class="section-subtitle">cause of unintentional injury death worldwide</p>
 
             </div>
             <div class="col-md-6 text-center padding-bottom-10 wow slideInUp" data-wow-delay="2s" style="visibility: visible; animation-delay: 0.25s; animation-name: slideInUp;">
@@ -753,8 +777,7 @@
               <div class="card-header" id="headingTwo">
                 <h5 class="mb-0">
                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <img src="https://i.ibb.co/W00tZKR/feedback.jpg" alt="testimonials"
-                     class="testim-img">
+                    <img src="https://i.ibb.co/W00tZKR/feedback.jpg" alt="testimonials" class="testim-img">
                     <p class="testim-name">Charmagne Joci Epanto / <span>Nursing Student</span></p>
                   </button>
                 </h5>
