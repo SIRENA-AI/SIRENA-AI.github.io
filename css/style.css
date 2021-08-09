@@ -710,9 +710,6 @@ iframe {
 	padding-bottom: 20px;
 }
 
-.navbar-toggler {
-    border: 1px solid #e52f37;
-}
 
 .navbar-toggler-icon {
 	width: 1.3em;
@@ -720,7 +717,7 @@ iframe {
 }
 
 .navbar-toggler-icon i {
-    color: #e52f37;
+    color: #fff;
     vertical-align: middle;
 }
 
@@ -760,7 +757,7 @@ iframe {
 }
 
 .navbar-fixed-top .navbar-nav > li > a:hover{
-	color: #f9f9f9!important;
+	color: #fff!important;
 	-webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -787,17 +784,17 @@ iframe {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+
 }
 
 .navbar-fixed-top .navbar-nav > li > a.discover-btn:hover {
-	color: #be47b2!important;
+	color: 	#29a4c3!important;
 	background: #fff;
 	border: 2px solid #fff;
 }
 
 .navbar-fixed-top.opaque .navbar-nav > li > a.discover-btn {
-	color: #000!important;
-	background: #78DD8E;
+	color: #fff!important;
 	border: 1px solid #78DD8E;
      -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -807,7 +804,7 @@ iframe {
 
 .navbar-fixed-top.opaque .navbar-nav > li > a.discover-btn:hover {
 	border: 1px solid #78DD8E;
-	color: #e52f37!important;
+	color: #fff!important;
 	background: transparent;
 }
 
@@ -940,7 +937,7 @@ ul.footer_social li a i:hover {
 
 .frame-border {
     margin-top: 30px;
-    border: 10px solid rgba(0, 0, 0, 0.90);
+box-shadow: -12px -12px 24px var(--light-shadow, transparent), 12px 12px 24px var(--shadow, transparent);
     webkit-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
@@ -2290,10 +2287,11 @@ p.contact_success_box{
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: 500;
-	color: #fff;
-	background-color: #e52f37;
-	border: 1px solid #e52f37;
-    box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.27);
+  background-color: linear-gradient(to right, #30b1ce 20%, #30b1ce 40%, 	#318db2 60%, 	#003b61 80%);
+  background-size: 200% auto;
+  box-shadow:
+    rgba(118, 117, 154, 0.44) 4px 4px 11px,
+    white -4px -4px 10px;
     letter-spacing: 1px;
 	border-radius: 23px 23px;
 	margin: 5px 10px 10px 0;
@@ -2501,7 +2499,7 @@ ul.benefits.white li i {
     background-color: #fff;
     border: 1px solid #f4f5f6!important;
     border-radius: 8px !important;
-	box-shadow: 0 12px 55px 0 rgba(0,0,0,.05) !important;
+  box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
 	-moz-box-shadow: 0 12px 55px 0 rgba(0,0,0,.05) !important;
 	-webkit-box-shadow: 0 12px 55px 0 rgba(0,0,0,.05) !important;
 	transition: all 1s;
