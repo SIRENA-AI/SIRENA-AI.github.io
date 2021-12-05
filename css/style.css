@@ -45,7 +45,6 @@ font-family: 'Source Sans Pro', sans-serif;margin-left: 0;}
     top: 0;
     margin: auto;
 		background: rgb(2,0,36);
-		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 			background-size: 400% 400%;
 			-webkit-animation: Gradient 10s ease infinite;
 			-moz-animation: Gradient 10s ease infinite;
@@ -59,7 +58,8 @@ font-family: 'Source Sans Pro', sans-serif;margin-left: 0;}
     bottom: -1px;
 		  z-index: -1;
 			background: rgb(2,0,36);
-			background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+			background-color: #000000;
+			background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
 
 				background-size: 400% 400%;
 				-webkit-animation: Gradient 10s ease infinite;
@@ -173,8 +173,8 @@ h8 {
   font-family: 'Roboto', sans-serif;
   line-height: 1.2;
   margin-top: 0;
-  margin-bottom:20px;
-  color: #78DD8E;
+  margin-bottom:40px;
+  color: #FF725E;
   font-weight: 500;
 }
 
@@ -370,7 +370,7 @@ iframe {
 
 .section-black {
 	background: #18191A;
-	padding: 90px 0 70px 0;
+	padding: 70px 0 30px 0;
 }
 
 
@@ -757,7 +757,7 @@ iframe {
 }
 
 .navbar-fixed-top .navbar-nav > li > a:hover{
-	color: #30b1ce!important;
+	color: #407BFF!important;
 	-webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -765,7 +765,7 @@ iframe {
 }
 
 .navbar-fixed-top.opaque .navbar-nav .current a {
-    color:	#30b1ce!important;
+    color:	#FF725E!important;
      -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -795,7 +795,7 @@ iframe {
 
 .navbar-fixed-top.opaque .navbar-nav > li > a.discover-btn {
 	color: #fff!important;
-	border: 1px solid #78DD8E;
+	border: 1px solid #fff;
      -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -803,7 +803,7 @@ iframe {
 }
 
 .navbar-fixed-top.opaque .navbar-nav > li > a.discover-btn:hover {
-	border: 1px solid #78DD8E;
+	border: 1px solid #FF725E;
 	color: #fff!important;
 	background: transparent;
 }
@@ -945,7 +945,7 @@ box-shadow: -12px -12px 24px var(--light-shadow, transparent), 12px 12px 24px va
 
 /* Partners */
 .partners-section {
-    padding: 20px 0 20px 0;
+    padding: 50px 0 20px 0;
     background-color: #f7f7f9;
 	;
 }
@@ -1085,8 +1085,17 @@ box-shadow: -12px -12px 24px var(--light-shadow, transparent), 12px 12px 24px va
 }
 
 .main-services h4{
+	margin-bottom: 5px;
+	font-size: 45px;
+	font-family: 'Tesla';
+	color: #fff;
+}
+
+.main-services h5{
 	margin-bottom: 10px;
-	font-size: 21px;
+	font-size: 40px;
+	font-family: 'Tesla';
+	color: #fff;
 }
 
 .main-services p{
